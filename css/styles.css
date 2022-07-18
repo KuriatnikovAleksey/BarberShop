@@ -1,10 +1,23 @@
 :root {
+  --pr-font-color: #555555;
+  --sec-font-color: #303030;
+  --white-font-color: #ffffff;
+
+  --accent-color: #ff6c00;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   /* background-color: tomato; */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--pr-font-color);
+
+  background-color: #ccc;
 }
 .visually-hidden {
   position: absolute;
@@ -24,8 +37,32 @@ body {
 .link {
   text-decoration: none;
 }
+.list .nav {
+  color: var(--white-font-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
 .button {
+  display: inline-block;
+  min-width: 160px;
+  padding: 12px 20px;
+
+  color: var(--white-font-color);
   background-color: transparent;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+
+  text-transform: uppercase;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 2px solid tomato;
 }
