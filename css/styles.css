@@ -3,7 +3,8 @@
   --sec-font-color: #303030;
   --white-font-color: #ffffff;
 
-  --accent-color: #ff6c00;
+  --pr-accent-color: #ff6c00;
+  --sec-accent-color: #9da4bd;
 }
 
 body {
@@ -31,13 +32,19 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 2px solid tomato;
+}
+
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
-.list .nav {
+.header.link {
   color: var(--white-font-color);
 
   font-weight: 600;
@@ -45,9 +52,12 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
 }
+.feedback .link {
+  text-transform: uppercase;
+}
 .link:hover,
 .link:focus {
-  color: var(--accent-color);
+  color: var(--pr-accent-color);
 }
 .button {
   display: inline-block;
@@ -56,13 +66,49 @@ body {
 
   color: var(--white-font-color);
   background-color: transparent;
-  border: 1px solid #ff6c00;
+  border: 1px solid var(--pr-accent-color);
   border-radius: 25px;
 
   text-transform: uppercase;
 }
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  outline: 2px solid tomato;
+.button:hover {
+  color: var(--pr-accent-color);
+  border-color: var(--white-font-color);
+}
+.note {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--sec-font-color);
+
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+
+  letter-spacing: 0.05em;
+
+  color: var(--white-font-color);
+
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.accent-text {
+  color: var(--sec-accent-color);
+}
+.rotate .link {
+  /* display: inline-block; */
+  transform: rotate(-90deg);
+  color: var(--sec-font-color);
+
+  /* margin: 0;
+  padding: 0; */
 }
