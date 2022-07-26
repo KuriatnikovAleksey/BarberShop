@@ -32,14 +32,19 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.container.header {
+}
 .container {
-  width: 1200px;
+  width: 1170px;
   margin: 0 auto;
   outline: 2px solid tomato;
 }
 
 .list {
   list-style: none;
+}
+.nav > .list {
+  display: flex;
 }
 .link {
   text-decoration: none;
@@ -51,6 +56,10 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+}
+.feedback {
+  display: flex;
+  margin-left: auto;
 }
 .feedback .link {
   text-transform: uppercase;
