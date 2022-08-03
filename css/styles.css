@@ -26,6 +26,9 @@ ol {
 img {
   display: block;
 }
+address {
+  font-style: normal;
+}
 /* ------------ GLOBAL CSS ----------- */
 body {
   font-family: "Open Sans", sans-serif;
@@ -123,8 +126,7 @@ body {
 }
 
 /* ------------ HERO ----------- */
-.hero-section {
-}
+
 .hero-container {
   display: flex;
 }
@@ -182,16 +184,12 @@ body {
   color: var(--sec-accent-color);
 }
 /* ------------ ABOUT US ----------- */
-.about {
-}
 .about-container {
   display: flex;
 }
 .about-list {
   display: flex;
   gap: 30px;
-}
-.about-item {
 }
 .about-content {
   margin-left: 30px;
@@ -480,4 +478,71 @@ body {
 .work-list {
   display: flex;
   column-gap: 30px;
+}
+/* ------------ BOOKING AND CONTACTS ----------- */
+.booking-contacts {
+  padding-top: 130px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #191c26;
+
+  background-image: url(../images/bg-contacts.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 98%;
+}
+.booking-contacts > .container {
+  display: flex;
+}
+/* ------------ BOOKING ----------- */
+
+.booking {
+  width: calc(50% + 15px);
+}
+.booking-title {
+  margin-bottom: 44px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: var(--white-font-color);
+}
+.forma {
+  height: 188px;
+  margin-bottom: 44px;
+}
+/* ------------ CONTACTS ----------- */
+.contacts {
+  flex-grow: 1;
+}
+.contacts-title {
+  margin-bottom: 40px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  color: var(--white-font-color);
+}
+/* ------------ FOOTER ----------- */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  outline: 1px solid blue;
+}
+.footer > .container {
+  display: flex;
+}
+.footer-list {
+  display: flex;
+  margin-left: auto;
+}
+.footer-icon {
+  width: 24px;
+  height: 24px;
 }
