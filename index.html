@@ -68,7 +68,7 @@
       <section class="hero-section">
         <div class="container hero-container">
           <ul class="hero-list list">
-            <li>
+            <li class="hero-item">
               <a
                 href=""
                 target="_blank"
@@ -77,7 +77,7 @@
                 >Instagram</a
               >
             </li>
-            <li>
+            <li class="hero-item">
               <a
                 href=""
                 target="_blank"
@@ -400,15 +400,15 @@
         </div>
       </section>
       <!-- BOOKING AND CONTACTS -->
-
-      <!-- BOOKING -->
       <section class="booking-contacts section">
+        <!-- BOOKING -->
         <div class="container">
           <div class="booking">
             <h2 class="booking-title">Online-booking</h2>
             <form action="as" class="forma"></form>
             <button type="button" class="btn">send</button>
           </div>
+          <!-- CONTACTS -->
           <div class="contacts">
             <h2 class="contacts-title">Contacts</h2>
             <address>
@@ -416,30 +416,38 @@
                 href="https://goo.gl/maps/NnbFrrzfPTfD3eun6"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                class="link"
+                class="contacts-map-link link"
               >
-                <svg class="footer-icon">
-                  <use href="./images/sprite-min.svg#icon-map-pin"></use>
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-map-pin"></use>
                 </svg>
                 st. Vasilkovaya, 7A Kiev, 08132
               </a>
               <ul class="contacts-list list">
-                <li>
+                <li class="contacts-item">
                   <a href="tel:+380441111111" class="contacts-link link">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
                     +38 044 111 11 11
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="mailto:barbershop@email.com"
-                    class="contacts-link link"
-                  >
+                <li class="contacts-item">
+                  <a href="mailto:barbershop@email.com" class="contacts-link">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-mail"></use>
+                    </svg>
                     barbershop@email.com
                   </a>
                 </li>
               </ul>
             </address>
-            <p class="contacts-pre-title">Working hours</p>
+            <p class="contacts-pre-title">
+              <svg class="contacts-pre-title-icon" width="60" height="1">
+                <use href="./images/symbol-defs.svg#icon-band"></use>
+              </svg>
+              Working hours
+            </p>
             <p class="contacts-text">Every day from 9:00 to 22:00</p>
           </div>
         </div>
@@ -450,17 +458,20 @@
       <div class="container">
         <p class="footer-copyright">&copy; Copyright 2020</p>
         <ul class="footer-list list">
-          <li>
+          <li class="footer-item">
             <a
               href=""
               target="_blank"
               rel="noopener noreferrer nofollow"
               class="footer-link link"
             >
+              <svg class="footer-icon" width="60" height="1">
+                <use href="./images/symbol-defs.svg#icon-band"></use>
+              </svg>
               Instagram
             </a>
           </li>
-          <li>
+          <li class="footer-item">
             <a
               href=""
               target="_blank"
