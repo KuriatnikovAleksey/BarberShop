@@ -155,6 +155,9 @@ body {
   width: 100px;
 }
 
+.hero-item:not(:last-child) {
+  margin-right: 40px;
+}
 .hero-link {
   font-weight: 600;
   font-size: 11px;
