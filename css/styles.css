@@ -108,9 +108,10 @@ body {
 }
 /* ------------ HEADER ----------- */
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: #aaa;
 }
 .header-conteiner {
   display: flex;
@@ -151,10 +152,26 @@ body {
 .hero-container {
   display: flex;
 }
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
 }
-
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+}
+.hero-list::before {
+  margin-right: 40px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
 .hero-item:not(:last-child) {
   margin-right: 40px;
 }
