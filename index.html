@@ -59,7 +59,7 @@
           <a href="tel:+380441111111" class="header-link link"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="btn" data-modal-open>
+          <button type="button" class="btn header-btn" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -531,15 +531,21 @@
           <h2 class="form-header">Leave your details, we will call you back</h2>
           <label class="f-fild">
             <input class="f-input" type="text" name="name" placeholder=" " />
-            <span class="f-label">Name*</span>
+            <span class="f-label"
+              >Name<span class="f-label-color">*</span>
+            </span>
           </label>
           <label class="f-fild">
             <input class="f-input" type="tel" name="phone" placeholder=" " />
-            <span class="f-label">Phone*</span>
+            <span class="f-label"
+              >Phone<span class="f-label-color">*</span></span
+            >
           </label>
           <label class="f-fild">
             <input class="f-input" type="email" name="email" placeholder=" " />
-            <span class="f-label">E-mail*</span>
+            <span class="f-label"
+              >E-mail<span class="f-label-color">*</span></span
+            >
           </label>
           <label class="f-fild">
             <textarea
@@ -548,11 +554,14 @@
               name="text"
               placeholder=" "
             ></textarea>
-            <span class="f-label">Name*</span>
+            <span class="f-label">Message</span>
           </label>
           <label class="f-checkbox">
-            <input class="f-input" type="checkbox" name="policy" />
-            <span class="f-label">I agree with the newsletter and accept</span>
+            <input class="f-input-checkbox" type="checkbox" name="policy" />
+            <span class="castom-checkbox"></span>
+            <span class="f-label-checkbox"
+              >I agree with the newsletter and accept</span
+            >
             <a class="link-checkbox" href="">Terms of an agreement</a>
           </label>
           <button type="submit" class="btn checkbox-btn">Send</button>
@@ -563,7 +572,7 @@
     <script>
       (() => {
         document
-          .querySelector(".form-booking")
+          .querySelector(".form-online-booking")
           .addEventListener("submit", (e) => {
             e.preventDefault();
 
