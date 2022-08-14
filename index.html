@@ -59,7 +59,9 @@
           <a href="tel:+380441111111" class="header-link link"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="btn">Online-booking</button>
+          <button type="button" class="btn" data-modal-open>
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -200,19 +202,19 @@
           <div class="benefits-cards">
             <ul class="benefits-list list">
               <li class="benefits-item">
-                <span>600</span>
+                <span class="benefits-plus">600</span>
                 <p class="benefits-item-text">Satisfied customers per day</p>
               </li>
               <li class="benefits-item">
-                <span>50</span>
+                <span class="benefits-plus">50</span>
                 <p class="benefits-item-text">Awards for excellent service</p>
               </li>
               <li class="benefits-item">
-                <span>20</span>
+                <span class="benefits-plus">20</span>
                 <p class="benefits-item-text">Kyiv's best barbers</p>
               </li>
               <li class="benefits-item">
-                <span>100</span>
+                <span class="benefits-plus">100</span>
                 <p class="benefits-item-text">Gifts for regular customers</p>
               </li>
             </ul>
@@ -419,8 +421,35 @@
           <section class="booking">
             <!-- BOOKING -->
             <h2 class="booking-title title">Online-booking</h2>
-            <form action="as" class="forma"></form>
-            <button type="button" class="btn">send</button>
+            <form class="form-booking">
+              <label class="fild-name">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  placeholder=" "
+                />
+                <span class="label">Name*</span>
+              </label>
+              <label class="fild-name">
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="phone"
+                  placeholder=" "
+                />
+                <span class="label">Phone*</span>
+              </label>
+              <label class="fild-name">
+                <textarea
+                  class="form-text"
+                  name="message"
+                  placeholder=" "
+                ></textarea>
+                <span class="label">MESSAGE</span>
+              </label>
+              <button type="submit" class="btn">send</button>
+            </form>
           </section>
           <!-- CONTACTS -->
           <section class="contacts">
@@ -490,5 +519,60 @@
         </ul>
       </div>
     </footer>
+    <!-- BACKDROP AND MODAL -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="icon">
+            <use href="./images/sprite-min.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form-online-booking">
+          <h2 class="form-header">Leave your details, we will call you back</h2>
+          <label class="f-fild">
+            <input class="f-input" type="text" name="name" placeholder=" " />
+            <span class="f-label">Name*</span>
+          </label>
+          <label class="f-fild">
+            <input class="f-input" type="tel" name="phone" placeholder=" " />
+            <span class="f-label">Phone*</span>
+          </label>
+          <label class="f-fild">
+            <input class="f-input" type="email" name="email" placeholder=" " />
+            <span class="f-label">E-mail*</span>
+          </label>
+          <label class="f-fild">
+            <textarea
+              class="f-input-text"
+              type="text"
+              name="text"
+              placeholder=" "
+            ></textarea>
+            <span class="f-label">Name*</span>
+          </label>
+          <label class="f-checkbox">
+            <input class="f-input" type="checkbox" name="policy" />
+            <span class="f-label">I agree with the newsletter and accept</span>
+            <a class="link-checkbox" href="">Terms of an agreement</a>
+          </label>
+          <button type="submit" class="btn checkbox-btn">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".form-booking")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>

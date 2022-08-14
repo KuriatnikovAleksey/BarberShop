@@ -52,12 +52,12 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 }
 .link {
   text-decoration: none;
@@ -79,6 +79,7 @@ body {
   border-radius: 25px;
 
   cursor: pointer;
+  transition: color 0.35s ease, background-color 0.35s ease;
 }
 .btn:hover {
   color: var(--white-font-color);
@@ -136,8 +137,10 @@ body {
   letter-spacing: 0.1em;
 
   color: var(--white-font-color);
+  transition: color 0.35s ease;
 }
-.header-link:hover {
+.header-link:hover,
+.header-link:focus {
   color: var(--pr-accent-color);
 }
 .header-contacts {
@@ -182,6 +185,7 @@ body {
   letter-spacing: 0.2em;
 
   color: var(--sec-font-color);
+  transition: color 0.35s ease;
 }
 .hero-link:hover {
   color: var(--pr-accent-color);
@@ -362,7 +366,7 @@ body {
   text-align: center;
   background-color: #f7f7f7;
 }
-.benefits-item > span {
+.benefits-plus {
   display: block;
   margin-bottom: 6px;
   font-weight: 700;
@@ -374,7 +378,7 @@ body {
   color: var(--sec-font-color);
 }
 
-span::after {
+.benefits-plus::after {
   display: inline-block;
   content: "+";
   font-weight: 600;
@@ -506,12 +510,73 @@ span::after {
 }
 .booking-title {
   margin-bottom: 44px;
-
   color: var(--white-font-color);
 }
-.forma {
-  height: 188px;
+.form-booking {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fild-name {
+  position: relative;
   margin-bottom: 44px;
+  color: rgba(157, 164, 189, 0.4);
+}
+.fild-name:nth-child(1) {
+  margin-right: 30px;
+}
+.fild-name:focus-within .label {
+  transform: translateY(-20px);
+}
+.form-input:not(:placeholder-shown) + .label,
+.form-text:not(:placeholder-shown) + .label {
+  transform: translateY(-20px);
+}
+.fild-name::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
+.fild-name:hover .label,
+.fild-name:focus-within .label {
+  color: #ffffff;
+}
+.fild-name:hover::after,
+.fild-name:focus-within::after {
+  background-color: #ffffff;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: transform 350ms ease;
+}
+.form-input {
+  padding: 0;
+  padding-bottom: 8px;
+  width: 270px;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+.form-text {
+  display: block;
+  width: 570px;
+  height: 76px;
+  resize: none;
+  background-color: inherit;
+  color: inherit;
+  border: none;
 }
 /* ------------ CONTACTS ----------- */
 .contacts {
@@ -629,4 +694,102 @@ span::after {
 }
 .footer-item:not(:last-child) {
   margin-right: 40px;
+}
+/* ------------ BACKDROP ----------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 600px;
+  min-height: 750px;
+  background-color: #191c26;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+/* .no-scroll {
+  overflow: hidden;
+} */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid var(--pr-accent-color);
+  border-radius: 50%;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+  fill: var(--white-font-color);
+
+  transition: fill 0.35s ease;
+}
+.icon {
+  fill: inherit;
+  width: 18px;
+  height: 18px;
+}
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--pr-accent-color);
+}
+/* ------------ FORM ONLINE BOOKING ----------- */
+.modal {
+  padding: 50px 40px;
+}
+
+.form-header {
+  margin-bottom: 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+}
+.f-fild {
+  display: flex;
+  width: 100%;
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+.f-checkbox {
+  display: block;
+  margin-bottom: 50px;
+}
+.checkbox-btn {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: var(--white-font-color);
 }
