@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+}
+.logo-link {
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+.header-list {
+  display: flex;
+  column-gap: 30px;
+}
+.header-link {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--white-font-color);
+  transition: color 0.35s ease;
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--pr-accent-color);
+}
+.header-contacts {
+  margin-left: auto;
+}
+.header-contacts > .header-link {
+  margin-right: 45px;
+}
+.header-btn {
+  margin-right: 20px;
+}

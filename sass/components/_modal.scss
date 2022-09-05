@@ -1,0 +1,138 @@
+.modal {
+  padding: 50px 40px;
+}
+
+.form-header {
+  margin-bottom: 40px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+}
+.f-fild {
+  position: relative;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.f-fild:focus-within .f-label,
+.f-fild:hover .f-label {
+  transform: translateY(-25px);
+  color: var(--white-font-color);
+}
+.f-fild:hover::after,
+.f-fild:focus-within::after {
+  background-color: var(--white-font-color);
+}
+.f-input {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.16;
+
+  border: none;
+  background-color: inherit;
+  color: inherit;
+}
+.f-input:not(:placeholder-shown) + .f-label,
+.f-input-text:not(:placeholder-shown) + .f-label {
+  transform: translateY(-25px);
+}
+.f-fild:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
+
+  transition: background-color 0.35s ease;
+}
+.f-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  padding-top: 8px;
+
+  transition: color 0.35s ease, transform 0.25s ease;
+}
+.f-label-color {
+  color: var(--pr-accent-color);
+}
+.f-input-text {
+  display: block;
+  width: 100%;
+  height: 76px;
+  resize: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.16;
+
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+.f-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.castom-checkbox {
+  display: block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--white-font-color);
+  border-radius: 2px;
+  transition: background-color 0.35s ease, border-color 0.1s ease;
+}
+.f-input-checkbox {
+  position: absolute;
+  appearance: none;
+}
+.f-input-checkbox:checked ~ .castom-checkbox {
+  background-image: url(../images/check.svg);
+  background-origin: border-box;
+  background-color: var(--pr-accent-color);
+  border-color: var(--pr-accent-color);
+}
+.f-label-checkbox {
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--sec-accent-color);
+}
+.link-checkbox {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--pr-accent-color);
+}
+.checkbox-btn {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: var(--white-font-color);
+}

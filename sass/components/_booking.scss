@@ -1,0 +1,75 @@
+.booking {
+  padding-top: 130px;
+
+  width: calc(50% - 15px);
+}
+.booking-title {
+  margin-bottom: 44px;
+  color: var(--white-font-color);
+}
+.form-booking {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fild-name {
+  position: relative;
+  margin-bottom: 44px;
+  color: rgba(157, 164, 189, 0.4);
+}
+.fild-name:nth-child(1) {
+  margin-right: 30px;
+}
+.fild-name:focus-within .label {
+  transform: translateY(-20px);
+}
+.form-input:not(:placeholder-shown) + .label,
+.form-text:not(:placeholder-shown) + .label {
+  transform: translateY(-20px);
+}
+.fild-name::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
+.fild-name:hover .label,
+.fild-name:focus-within .label {
+  color: #ffffff;
+}
+.fild-name:hover::after,
+.fild-name:focus-within::after {
+  background-color: #ffffff;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: transform 350ms ease;
+}
+.form-input {
+  padding: 0;
+  padding-bottom: 8px;
+  width: 270px;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+.form-text {
+  display: block;
+  width: 570px;
+  height: 76px;
+  resize: none;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
