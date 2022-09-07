@@ -370,17 +370,34 @@ body {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  /* outline: 1px solid tomato; */
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 418px;
+    padding-left: 31px;
+    padding-right: 31px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 690px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-  /* outline: 1px solid blue; */
 }
 
 .link {
