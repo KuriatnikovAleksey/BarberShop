@@ -38,26 +38,34 @@ body {
 }
 .container {
   width: 100%;
+  margin: 0 auto;
   @include mobile {
     width: 418px;
     padding-left: 31px;
     padding-right: 31px;
-    margin: 0 auto;
   }
   @include tablet {
-    width: 690px;
-    padding-left: 39px;
-    padding-right: 39px;
+    width: 450px;
+    padding-left: 159px;
+    padding-right: 159px;
   }
   @include desktop {
-    width: 1200px;
+    width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 .link {
   text-decoration: none;

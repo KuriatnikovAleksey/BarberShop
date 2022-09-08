@@ -371,33 +371,45 @@ body {
 
 .container {
   width: 100%;
+  margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
   .container {
     width: 418px;
     padding-left: 31px;
     padding-right: 31px;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 690px;
-    padding-left: 39px;
-    padding-right: 39px;
+    width: 450px;
+    padding-left: 159px;
+    padding-right: 159px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .link {
@@ -1002,10 +1014,17 @@ body {
   color: var(--sec-font-color);
 }
 
-.wrapper {
+.barbers-list {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .barbers-list {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .barders-name {
