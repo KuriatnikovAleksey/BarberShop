@@ -5,10 +5,12 @@
 
   background-image: url(../images/bg-contacts.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: left;
+  //background-position: right;
   background-size: calc(50% - 15px) 100%;
 }
 .booking-contacts-wrap > .container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  //justify-content: space-between;
 }

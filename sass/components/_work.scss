@@ -5,5 +5,19 @@
 }
 .work-list {
   display: flex;
-  column-gap: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+.work-item {
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }

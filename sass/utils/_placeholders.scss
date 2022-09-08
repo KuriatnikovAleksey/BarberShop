@@ -15,6 +15,8 @@ ol {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 address {
   font-style: normal;
@@ -39,18 +41,20 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
   @include mobile {
-    width: 418px;
-    padding-left: 31px;
-    padding-right: 31px;
+    width: 480px;
+    //padding-left: 31px;
+    //padding-right: 31px;
   }
   @include tablet {
-    width: 450px;
-    padding-left: 159px;
-    padding-right: 159px;
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
   }
   @include desktop {
-    width: 1170px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
   }

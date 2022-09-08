@@ -343,6 +343,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
@@ -372,24 +374,24 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 418px;
-    padding-left: 31px;
-    padding-right: 31px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 450px;
-    padding-left: 159px;
-    padding-right: 159px;
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1008,10 +1010,20 @@ body {
   margin-bottom: 20px;
   color: var(--sec-font-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .barbers-pre-title {
+    padding-left: 120px;
+  }
+}
 
 .barbers-title {
   margin-bottom: 44px;
   color: var(--sec-font-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .barbers-title {
+    padding-left: 120px;
+  }
 }
 
 .barbers-list {
@@ -1084,8 +1096,26 @@ body {
 
 .work-list {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .work-list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .booking-contacts-wrap {
@@ -1094,18 +1124,18 @@ body {
   background-color: #191c26;
   background-image: url(../images/bg-contacts.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: left;
   background-size: calc(50% - 15px) 100%;
 }
 
 .booking-contacts-wrap > .container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .booking {
   padding-top: 130px;
-  width: calc(50% - 15px);
+  width: 100%;
 }
 
 .booking-title {
@@ -1196,10 +1226,7 @@ body {
 }
 
 .contacts {
-  padding-top: 130px;
-  padding-bottom: 120px;
-  padding-left: 100px;
-  width: calc(50% - 15px);
+  width: 100%;
 }
 
 .contacts-title {
